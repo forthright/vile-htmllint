@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+babel -w -d lib -m common --compact false src &
+coffee -cwbo .test test &

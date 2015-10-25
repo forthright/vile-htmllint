@@ -1,0 +1,80 @@
+vile:
+  plugins: [
+      "nsp",
+      "ncu",
+      "license",
+      "depcheck",
+      "coffeelint",
+      "jshint",
+      "eslint",
+      "newline",
+      "readme",
+      "semver",
+      "comment",
+      "length",
+      "whitespace"
+    ]
+
+  ignore: [
+      "node_modules",
+      ".test",
+      "coverage"
+    ]
+
+eslint:
+  config: .eslintrc
+  ignore: .eslintignore
+
+jshint:
+  config: .jshintrc
+  ignore: .jshintignore
+
+coffeelint:
+  config: .coffeelintrc
+
+depcheck:
+  config:
+    ignore_dev_deps: false
+    ignore_dirs: [ ]
+    ignore_deps: [ "pryjs", "bluebird" ]
+
+htmllint:
+  config: .htmllintrc
+  ignore: [ "test/fixtures/bad.html" ]
+
+length:
+  config:
+    file: 250
+    line: 80
+  ignore: [ "lib" ]
+
+license:
+  config: [
+      "MPL-2.0",
+      "MIT",
+      "MIT*",
+      "The MIT License",
+      "Public Domain",
+      "PSF",
+      "BSD",
+      "FreeBSD",
+      "BSD-like",
+      "BSD*",
+      "BSD-3-Clause",
+      "BSD-2-Clause",
+      "BSD-3-Clause AND MIT",
+      "Artistic-2.0",
+      "(BSD-2-Clause OR MIT OR Apache-2.0)",
+      "ISC",
+      "WTFPL",
+      "(BSD-2-Clause OR WTFPL)",
+      "Apache*",
+      "Apache License 2.0",
+      "Apache 2.0",
+      "Apache-2.0",
+      "WTFPL"
+    ]
+
+  ignore: [
+      "ansi" # MIT
+    ]

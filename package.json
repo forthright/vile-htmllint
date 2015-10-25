@@ -1,0 +1,37 @@
+{
+  "name": "@brentlintner/vile-htmllint",
+  "version": "0.1.1",
+  "description": "A vile plugin for htmllint",
+  "license": "MPL-2.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "postinstall": "babel -d lib -m common src",
+    "dev": "bin/dev",
+    "test": "bin/test",
+    "test-cov": "bin/test-cov",
+    "wrap": "npm-shrinkwrap",
+    "update": "police -lt package.json && constable -u"
+  },
+  "dependencies": {
+    "@brentlintner/vile": "^0.1.7",
+    "babel": "~5.8.23",
+    "bluebird": "~2.9.34",
+    "cjson": "~0.3.1",
+    "htmllint": "~0.2.6",
+    "lodash": "~3.10.1"
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "chai-as-promised": "~5.1.0",
+    "coffee-script": "1.10.0",
+    "constable": "~0.0.4",
+    "istanbul": "~0.3.19",
+    "mimus": "~0.1.2",
+    "mocha": "~2.3.0",
+    "npm-shrinkwrap": "~5.4.0",
+    "police": "~0.4.0",
+    "pryjs": "~0.1.1",
+    "sinon": "~1.16.1",
+    "sinon-chai": "~2.8.0"
+  }
+}
