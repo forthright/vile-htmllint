@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 4.2.4
+
+dependencies:
+  post:
+    - npm run compile
+    - npm run compile-dev
+
+test:
+  override:
+    - npm run test-cov
+  post:
+    - npm run vile

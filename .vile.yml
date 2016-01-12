@@ -1,52 +1,44 @@
 vile:
-  plugins: [
-      "nsp",
-      "ncu",
-      "license",
-      "depcheck",
-      "coffeelint",
-      "jshint",
-      "eslint",
-      "newline",
-      "readme",
-      "semver",
-      "comment",
-      "length",
-      "whitespace"
-    ]
-
   ignore: [
+      ".build",
+      "coverage",
       "node_modules",
+      "lib",
+      "tags",
       ".test",
-      "coverage"
+      ".ctags",
+      "circle.yml",
+      ".editorconfig",
+      ".eslintignore",
+      ".eslintrc",
+      ".fs-lint",
+      ".jshintrc",
+      ".jshintignore",
+      ".gitignore",
+      ".npmrc",
+      "README.md",
+      ".vile.yml",
+      ".vilerc"
     ]
 
-eslint:
-  config: .eslintrc
-  ignore: .eslintignore
-
-jshint:
-  config: .jshintrc
-  ignore: .jshintignore
-
-coffeelint:
-  config: .coffeelintrc
-
-depcheck:
+coverage:
   config:
-    ignore_dev_deps: false
-    ignore_dirs: [ ]
-    ignore_deps: [ "pryjs", "bluebird" ]
-
-htmllint:
-  config: .htmllintrc
-  ignore: [ "test/fixtures/bad.html" ]
+    path: coverage/lcov.info
 
 length:
   config:
     file: 250
     line: 80
-  ignore: [ "lib" ]
+
+jshint:
+  config: .jshintrc
+  ignore: .jshintignore
+
+depcheck:
+  config:
+    ignore_dev_deps: false
+    ignore_dirs: [ ]
+    ignore_deps: [ "@brentlintner/*" ]
 
 license:
   config: [
@@ -57,8 +49,6 @@ license:
       "Public Domain",
       "PSF",
       "BSD",
-      "FreeBSD",
-      "BSD-like",
       "BSD*",
       "BSD-3-Clause",
       "BSD-2-Clause",
@@ -73,8 +63,4 @@ license:
       "Apache 2.0",
       "Apache-2.0",
       "WTFPL"
-    ]
-
-  ignore: [
-      "ansi" # MIT
     ]
