@@ -22,14 +22,16 @@ expected_bad_issues = [{
   type: "error",
   file: "bad.html",
   msg: "the <head> tag must contain a title",
-  where: { start: { line: 2, character: 3 }, end: {} }
+  where: { start: { line: 2, character: 3 }, end: {} },
+  data: {}
 }]
 
 expected_good_issues = [{
   type: "ok",
   file: "good.html",
   msg: "",
-  where: { start: {}, end: {} }
+  where: { start: {}, end: {} },
+  data: {}
 }]
 
 mimic_htmllint_resolve = ->
