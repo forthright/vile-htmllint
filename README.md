@@ -11,15 +11,23 @@ A [vile](http://vile.io) plugin for [htmllint](http://htmllint.github.io).
 
     npm i vile-htmllint
 
-## Config
+## Config File
 
-By default, config defaults to `.htmllintrc`.
+By default, config uses `.htmllintrc`.
 
 You can specify a custom one, instead:
 
 ```yaml
 htmllint:
   config: htmllint.json
+```
+
+Or, you can specify inline rules:
+
+```yaml
+htmllint:
+  config:
+    doctype-html5: true
 ```
 
 ## Ignoring Files
@@ -31,6 +39,16 @@ htmllint:
     "file",
     "dir"
   ]
+```
+
+## Plugins
+
+This will pass these values to `htmllint.use`.
+
+```yaml
+htmllint:
+  config:
+    plugins: [ "a_plugin" ]
 ```
 
 ## Licensing
