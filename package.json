@@ -15,7 +15,8 @@
     "dev": "bin/dev",
     "test": "bin/test",
     "test-cov": "bin/test-cov",
-    "update": "ncu -a"
+    "update": "ncu -a",
+    "vile": "vile -cpd --nodecorations"
   },
   "dependencies": {
     "@brentlintner/vile": "^0.4.1",
