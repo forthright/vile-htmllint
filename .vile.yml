@@ -30,10 +30,6 @@ length:
     file: 250
     line: 80
 
-jshint:
-  config: .jshintrc
-  ignore: .jshintignore
-
 depcheck:
   config:
     ignore_dev_deps: false

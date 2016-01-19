@@ -19,19 +19,12 @@ htmllint_config =
     plugins: []
 
 expected_bad_issues = [{
-  type: "error",
-  file: "bad.html",
-  msg: "the <head> tag must contain a title",
-  where: { start: { line: 2, character: 3 }, end: {} },
-  data: {}
-}]
-
-expected_good_issues = [{
-  type: "ok",
-  file: "good.html",
-  msg: "",
-  where: { start: {}, end: {} },
-  data: {}
+  type: "style",
+  path: "bad.html",
+  title: "E027 (page-title)",
+  message: "the <head> tag must contain a title",
+  signature: "htmllint::E027"
+  where: { start: { line: 2, character: 3 } }
 }]
 
 mimic_htmllint_resolve = ->
@@ -58,7 +51,7 @@ describe "vile-htmllint", ->
     describe "with an errorless file", ->
       it "finds no issues", ->
         config = config: ".htmllintrc", ignore: [ "bad.html" ]
-        lib.punish(config).should.become expected_good_issues
+        lib.punish(config).should.become []
 
   describe "loading config", ->
     mimic_htmllint_resolve()

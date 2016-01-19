@@ -7,41 +7,35 @@ let vile = require("@brentlintner/vile")
 const IS_HTML = /\.html?$/
 const DEFAULT_HTMLLINT_CONFIG = ".htmllintrc"
 
-let allowed = (ignore) => (file) => {
-  return IS_HTML.test(file) && !vile.ignored(file, ignore)
-}
+let allowed = (ignore) => (file) =>
+  IS_HTML.test(file) && !vile.ignored(file, ignore)
 
-let load_config = (filename) => {
-  return cjson.load(path.join(process.cwd(), filename))
-}
+let load_config = (filename) =>
+  cjson.load(path.join(process.cwd(), filename))
 
-let config = (custom_config) => {
-  if (typeof custom_config == "string") {
-    return load_config(custom_config)
-  } else if (!custom_config) {
-    return load_config(DEFAULT_HTMLLINT_CONFIG)
-  } else {
-    return custom_config
-  }
-}
+let config = (custom_config) =>
+  typeof custom_config == "string" ?
+    load_config(custom_config) :
+      !custom_config ?
+        load_config(DEFAULT_HTMLLINT_CONFIG) :
+        custom_config
 
-let into_issues = (hl_config) => (filepath, data) => {
-  return htmllint(data, hl_config)
-    .then((issues) => {
-      if (issues.length > 0) {
-        return issues.map((issue) => {
-          return vile.issue(
-            vile.ERROR,
-            filepath,
-            htmllint.messages.renderIssue(issue),
-            { line: issue.line, character: issue.column }
-          )
-        })
-      } else {
-        return [ vile.issue(vile.OK, filepath) ]
-      }
-    })
-}
+let into_issues = (hl_config) => (filepath, data) =>
+  htmllint(data, hl_config)
+    .then((issues) =>
+      issues.map((issue) =>
+        vile.issue({
+          type: vile.STYL,
+          path: filepath,
+          title: `${issue.code} (${issue.rule})`,
+          message: htmllint.messages.renderIssue(issue),
+          signature: `htmllint::${issue.code}`,
+          where: {
+            start: {
+              line: issue.line, character: issue.column
+            }
+          }
+        })))
 
 let punish = (user_config) => {
   const ignore = _.get(user_config, "ignore", [])
