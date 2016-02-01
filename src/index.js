@@ -7,8 +7,9 @@ let vile = require("@brentlintner/vile")
 const IS_HTML = /\.html?$/
 const DEFAULT_HTMLLINT_CONFIG = ".htmllintrc"
 
-let allowed = (ignore) => (file) =>
-  IS_HTML.test(file) && !vile.ignored(file, ignore)
+let allowed = (ignore) => (file, is_dir) =>
+  (is_dir || IS_HTML.test(file))
+    && !vile.ignored(file, ignore)
 
 let load_config = (filename) =>
   cjson.load(path.join(process.cwd(), filename))

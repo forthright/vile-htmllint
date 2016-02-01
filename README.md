@@ -38,6 +38,8 @@ htmllint:
 
 ## Ignoring Files
 
+`vile.ignore` is used as a base, but you can add onto it:
+
 ```yaml
 htmllint:
   ignore: [

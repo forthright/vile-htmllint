@@ -6,8 +6,7 @@
   "main": "lib/index.js",
   "files": [
     "bin",
-    "lib",
-    "src"
+    "lib"
   ],
   "scripts": {
     "compile": "babel -d lib -m common src",
@@ -19,7 +18,7 @@
     "vile": "vile -cpd --nodecorations"
   },
   "dependencies": {
-    "@brentlintner/vile": "^0.5.2",
+    "@brentlintner/vile": "^0.5.10",
     "bluebird": "^3.1.1",
     "cjson": "^0.3.3",
     "htmllint": "^0.2.7",
