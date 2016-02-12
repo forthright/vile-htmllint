@@ -34,7 +34,7 @@ depcheck:
   config:
     ignore_dev_deps: false
     ignore_dirs: [ ]
-    ignore_deps: [ "@brentlintner/*" ]
+    ignore_deps: [ "@forthright/*" ]
 
 license:
   config: [
