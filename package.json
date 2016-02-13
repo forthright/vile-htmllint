@@ -22,7 +22,7 @@
     "bluebird": "^3.3.0",
     "cjson": "^0.3.3",
     "htmllint": "^0.2.7",
-    "lodash": "^4.3.0"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "@forthright/vile-coffeelint": "0.1.4",
