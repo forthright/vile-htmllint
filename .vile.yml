@@ -1,66 +1,120 @@
 vile:
-  ignore: [
-      ".build",
-      "coverage",
-      "node_modules",
-      "lib",
-      "tags",
-      ".test",
-      ".ctags",
-      ".git",
-      "circle.yml",
-      ".editorconfig",
-      ".eslintignore",
-      ".eslintrc",
-      ".fs-lint",
-      ".jshintrc",
-      ".jshintignore",
-      ".gitignore",
-      ".npmrc",
-      "README.md",
-      "tmp",
-      ".vile.yml",
-      ".vilerc"
-    ]
+  ignore:
+    - appveyor.yml
+    - coverage
+    - coffeelint.json
+    - .ackrc
+    - .babelrc
+    - .build
+    - .npmignore
+    - .travis.yml
+    - .vim.custom
+    - node_modules
+    - lib
+    - tags
+    - .test
+    - .ctags
+    - .git
+    - circle.yml
+    - .editorconfig
+    - .eslintignore
+    - .eslintrc
+    - .gitignore
+    - .npmrc
+    - tags
+    - tmp
+    - tsconfig.json
+    - tslint.json
+    - tsd.json
+    - "/lib"
+    - vendor
+    - README.md
+    - typings
+    - .vile.yml
 
-coverage:
+depcheck:
   config:
-    path: coverage/lcov.info
+    ignore_dev_deps: false
+    ignore_dirs:
+      - src
+      - typings
+      - node_modules
+      - coverage
+      - tmp
+    ignore_deps:
+      - mocha
+      - babel-cli
+      - coffee-script
+      - istanbul
+      - release-it
+      - typescript
+      - wrench
+      - pryjs
+      - shelljs
+      - "@forthright/*"
 
 length:
   config:
     file: 120
     line: 80
 
-depcheck:
+coverage:
   config:
-    ignore_dev_deps: false
-    ignore_dirs: [ ]
-    ignore_deps: [ "@forthright/*" ]
+    path: coverage/lcov.info
 
 license:
   config:
-    allowed: [
-      "MIT",
-      "MIT License",
-      "MIT AND JSON",
-      "The MIT License",
-      "MPL",
-      "MPL-2.0",
-      "Public Domain",
-      "PSF",
-      "BSD",
-      "BSD-3-Clause",
-      "BSD-2-Clause",
-      "Unlicense",
-      "Artistic-2.0",
-      "ISC",
-      "WTFPL",
-      "Apache",
-      "Apache-2.0",
-      "Apache 2.0",
-      "Apache*",
-      "Apachev2",
-      "WTFPL",
-      "GPL"
-    ]
+    ignored:
+      - cli-table
+      - classifier
+      - dox
+      - growl
+      - debug
+      - commander
+      - microee
+      - map-stream
+      - event-stream
+      - pjs
+      - uri-templates
+      - parsimmon
+      - tweetnacl
+      - split
+      - tv4
+      - forthright/vile-comment
+      - forthright/vile-eslint
+      - forthright/vile-length
+      - forthright/vile-nsp
+      - forthright/vile-stat
+      - forthright/vile-tslint
+      - forthright/vile-whitespace
+    disallowed: []
+    allowed:
+      - CC-BY-3.0
+      - The MIT License
+      - MIT
+      - MIT AND CC-BY-3.0
+      - MPL
+      - MPL-2.0
+      - MPLv2.0
+      - Public Domain
+      - PSF
+      - BSD
+      - BSD-3-Clause
+      - BSD-2-Clause
+      - BSD-3-Clause AND MIT
+      - BSD-2-Clause OR MIT
+      - BSD-2-Clause OR WTFPL
+      - BSD-2-Clause OR MIT OR Apache-2.0
+      - Unlicense
+      - Artistic-2.0
+      - ISC
+      - WTFPL
+      - Apache
+      - Apache2
+      - Apache-2.0
+      - Apache 2.0
+      - Apache*
+      - Apache License, Version 2.0
+      - Apachev2
+      - WTFPL
+      - GPL
