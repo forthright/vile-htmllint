@@ -15,7 +15,7 @@
     "test": "bin/test",
     "test-cov": "bin/test-cov",
     "update": "ncu -a",
-    "vile": "vile -cpisd --nodecorations"
+    "vile": "vile p -usi --nodecorations"
   },
   "dependencies": {
     "bluebird": "^3.4.0",
@@ -24,7 +24,7 @@
     "lodash": "^4.12.0"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.8.2",
+    "@forthright/vile": ">= 0.9.1",
     "@forthright/vile-coffeelint": ">=0.1.11",
     "@forthright/vile-comment": ">=0.1.15",
     "@forthright/vile-coverage": ">=0.2.11",
