@@ -32,7 +32,6 @@
     "@forthright/vile-depcheck": ">=0.1.11",
     "@forthright/vile-eclint": ">=0.1.9",
     "@forthright/vile-eslint": ">=0.1.12",
-    "@forthright/vile-fs-lint": ">=0.3.8",
     "@forthright/vile-git": "^0.5.0",
     "@forthright/vile-language": ">=0.1.11",
     "@forthright/vile-length": ">=0.1.11",
