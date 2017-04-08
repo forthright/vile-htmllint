@@ -1,4 +1,4 @@
-# vile-htmllint [![Circle CI](https://circleci.com/gh/forthright/vile-htmllint.svg?style=svg&circle-token=a1c7ff09e5e5ff375f17f8f82f0e2bbce3136914)](https://circleci.com/gh/forthright/vile-htmllint)
+# vile-htmllint [![Circle CI](https://circleci.com/gh/forthright/vile-htmllint.svg?style=shield&circle-token=a1c7ff09e5e5ff375f17f8f82f0e2bbce3136914)](https://circleci.com/gh/forthright/vile-htmllint)
 
 A [vile](https://vile.io) plugin for [htmllint](https://htmllint.github.io).
 
