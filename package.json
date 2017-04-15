@@ -30,7 +30,7 @@
     "@forthright/vile-comment": ">=0.1.17",
     "@forthright/vile-coverage": ">=0.2.14",
     "@forthright/vile-depcheck": ">=0.1.12",
-    "@forthright/vile-eclint": ">=0.1.11",
+    "@forthright/vile-eclint": ">=0.1.13",
     "@forthright/vile-eslint": ">=0.1.13",
     "@forthright/vile-git": "^0.5.1",
     "@forthright/vile-language": ">=0.1.12",
