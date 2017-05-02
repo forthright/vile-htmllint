@@ -2,7 +2,7 @@ let path = require("path")
 let cjson = require("cjson")
 let htmllint = require("htmllint")
 let _ = require("lodash")
-let vile = require("@forthright/vile")
+let vile = require("vile")
 
 const IS_HTML = /\.html?$/
 const DEFAULT_HTMLLINT_CONFIG = ".htmllintrc"

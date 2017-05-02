@@ -1,13 +1,23 @@
 {
-  "name": "@forthright/vile-htmllint",
+  "name": "vile-htmllint",
   "version": "0.2.13",
   "description": "A vile plugin for htmllint",
-  "license": "MPL-2.0",
   "main": "lib/index.js",
   "files": [
-    "bin",
-    "lib"
+    "lib",
+    "LICENSE",
+    "README.md"
   ],
+  "author": "Brent Lintner <brent.lintner@gmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/forthright/vile-htmllint/issues"
+  },
+  "homepage": "https://github.com/forthright/vile-htmllint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forthright/vile-htmllint.git"
+  },
   "scripts": {
     "compile": "babel -d lib -m common src",
     "compile-dev": "coffee -cbo .test test",
@@ -15,7 +25,7 @@
     "test": "bin/test",
     "test-cov": "bin/test-cov",
     "update": "ncu -a",
-    "vile": "vile p -usi --nodecorations",
+    "vile": "vile p -usi -n",
     "release-it": "release-it"
   },
   "dependencies": {
@@ -25,22 +35,6 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.13.0",
-    "@forthright/vile-coffeelint": ">=0.1.14",
-    "@forthright/vile-comment": ">=0.1.17",
-    "@forthright/vile-coverage": ">=0.2.14",
-    "@forthright/vile-depcheck": ">=0.1.12",
-    "@forthright/vile-eclint": ">=0.1.13",
-    "@forthright/vile-eslint": ">=0.1.13",
-    "@forthright/vile-git": "^0.5.1",
-    "@forthright/vile-language": ">=0.1.12",
-    "@forthright/vile-length": ">=0.1.12",
-    "@forthright/vile-ncu": ">=0.2.1",
-    "@forthright/vile-newline": ">=0.1.12",
-    "@forthright/vile-nsp": ">=0.2.13",
-    "@forthright/vile-semver": ">=0.1.11",
-    "@forthright/vile-stat": "0.0.14",
-    "@forthright/vile-whitespace": ">=0.1.11",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
@@ -55,6 +49,6 @@
     "sinon-chai": "^2.9.0"
   },
   "peerDependencies": {
-    "@forthright/vile": ">=0.13.0"
+    "vile": ">=0.13.0"
   }
 }
