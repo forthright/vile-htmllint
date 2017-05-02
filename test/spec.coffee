@@ -7,7 +7,7 @@ mimus = require "mimus"
 sinon = require "sinon"
 chai = require "chai"
 expect = chai.expect
-lib = mimus.require "../lib/index", __dirname, [ "vile" ]
+lib = mimus.require "../lib/index", __dirname
 cjson = mimus.get lib, "cjson"
 vile = mimus.get lib, "vile"
 htmllint_old = undefined
@@ -59,33 +59,40 @@ describe "vile-htmllint", ->
     describe "passing plugins", ->
       it "works when present", (done) ->
         lib.punish(config: plugins: htmllint_plugins)
-          .should.be.fulfilled
-          .then ->
-            htmllint.use.should.have.been
-              .calledWith htmllint_plugins
-          .should.notify done
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              htmllint.use.should.have.been
+                .calledWith htmllint_plugins
+              done()
+        return
 
       it "works when not present", (done) ->
-        lib.punish().should.be.fulfilled
-          .then ->
-            htmllint.use.should.have.been.calledWith []
-          .should.notify done
+        lib.punish()
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              htmllint.use.should.have.been.calledWith []
+              done()
+        return
 
     describe "with nothing given", ->
       beforeEach -> mimus.stub(cjson, "load").returns {}
 
       it "attempts to use '.htmllintrc'", (done) ->
-        lib.punish().should.be.fulfilled
-          .then ->
-            cjson.load.should.have.been
-              .calledWith util.config_path ".htmllintrc"
-          .should.notify done
+        lib.punish()
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              cjson.load.should.have.been
+                .calledWith util.config_path ".htmllintrc"
+              done()
+        return
 
     describe "with an inline object config", ->
       beforeEach -> mimus.stub cjson, "load"
 
       it "uses that", (done) ->
-        lib.punish(htmllint_config).should.be.fulfilled
-          .then ->
-            cjson.load.should.not.have.been.called
-          .should.notify done
+        lib.punish(htmllint_config)
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              cjson.load.should.not.have.been.called
+              done()
+        return
