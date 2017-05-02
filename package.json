@@ -1,6 +1,6 @@
 {
   "name": "vile-htmllint",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "A vile plugin for htmllint",
   "main": "lib/index.js",
   "files": [
