@@ -1,6 +1,0 @@
---recurse=yes
---tag-relative=yes
---exclude=.git
---exclude=.test
---exclude=coverage
---exclude=node_modules
