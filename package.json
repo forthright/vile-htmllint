@@ -25,7 +25,7 @@
     "test": "bin/test",
     "test-cov": "bin/test-cov",
     "update": "ncu -a",
-    "vile": "vile p -u -n",
+    "vile": "vile a -u -n",
     "release-it": "release-it"
   },
   "dependencies": {
@@ -37,17 +37,17 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
     "coffee-script": "1.12.6",
     "istanbul": "^0.4.5",
-    "mimus": "^0.2.5",
+    "mimus": "^0.2.6",
     "mocha": "^3.4.2",
-    "npm-check-updates": "^2.11.3",
-    "release-it": "^2.7.3",
-    "sinon": "^2.3.2",
-    "sinon-chai": "^2.10.0",
-    "vile": "^0.16.0"
+    "npm-check-updates": "^2.12.0",
+    "release-it": "^2.8.0",
+    "sinon": "^2.3.5",
+    "sinon-chai": "^2.11.0",
+    "vile": "^0.17.1"
   },
   "peerDependencies": {
     "vile": ">=0.15.0"
