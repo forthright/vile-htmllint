@@ -1,34 +1,20 @@
 vile:
   ignore:
-    - LICENSE
-    - appveyor.yml
+    - ".*"
+    - bin
     - coverage
-    - coffeelint.json
-    - .ackrc
-    - .babelrc
-    - .build
-    - .npmignore
-    - .travis.yml
-    - .vim.custom
-    - node_modules
+    - doc
+    - "*.json"
     - lib
+    - LICENSE
+    - "*.lock"
+    - "*.log"
+    - "*.md"
+    - node_modules
+    - src/@types
     - tags
-    - .test
-    - .ctags
-    - .git
-    - circle.yml
-    - .editorconfig
-    - .eslintignore
-    - .eslintrc
-    - .gitignore
-    - .npmrc
-    - tags
+    - test/fixtures
+    - test/mocha.opts
     - tmp
-    - tsconfig.json
-    - tslint.json
-    - tsd.json
-    - "/lib"
     - vendor
-    - README.md
-    - typings
-    - .vile.yml
+    - "*.yml"
