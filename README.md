@@ -1,6 +1,7 @@
 # vile-htmllint
 
-A [vile](https://vile.io) plugin for [htmllint](https://htmllint.github.io).
+A [Vile](https://vile.io) plugin for identifying common style and
+maintainability issues in your HTML files (via [htmllint](https://htmllint.github.io)).
 
 **NOTICE**
 
@@ -10,8 +11,7 @@ alternative to switch to, please open an issue and ask!
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -61,7 +61,7 @@ htmllint:
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -88,15 +88,9 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-### Maintainers
-
-- Nothing to see here...
-
-## Hacking
+## Developing
 
     cd vile-htmllint
     npm install
